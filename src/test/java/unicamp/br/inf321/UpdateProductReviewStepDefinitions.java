@@ -4,7 +4,6 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import io.restassured.http.ContentType;
-import org.json.JSONObject;
 
 import java.util.Map;
 
@@ -59,18 +58,25 @@ public class UpdateProductReviewStepDefinitions {
 
     @Dado("usuário está autenticado")
     public void usuário_está_autenticado(Map<String, String> table) {
-        String username = table.get("email");
-        String password = table.get("password");
-        JSONObject requestBody = new JSONObject();
-        requestBody.put("username", username);
-        requestBody.put("password", password);
-        cucumberWorld.setResponse(cucumberWorld.getRequest()
-                .body(requestBody.toString())
-                .when().post("/api/v1/customer/login"));
+        this.cucumberWorld.addToNotes("email", table.get("email"));
+        this.cucumberWorld.addToNotes("password", table.get("password"));
+
+        // reusing already existent steps to avoid code duplication
+        LoginStepDefinitions loginStepDefinitions = new LoginStepDefinitions(cucumberWorld);
+
+        loginStepDefinitions.isRegisteredOnTheMultibagsWebsite();
+        loginStepDefinitions.loginsWithValidCredentials(table);
+        loginStepDefinitions.shouldBeLoggedWithSuccess();
     }
 
     @Dado("o Product ID informado não existe no sistema")
     public void o_product_id_informado_não_existe_no_sistema() {
+        cucumberWorld.addToNotes("reviewId", "1");
+        cucumberWorld.addToNotes("productId", "99999999999");
+    }
+
+    @Dado("o review está preenchido com os dados da avaliação")
+    public void o_review_está_preenchido_com_os_dados_da_avaliação() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
@@ -101,6 +107,12 @@ public class UpdateProductReviewStepDefinitions {
 
     @Então("a API deve atualizar o review do cliente com os novos dados informados")
     public void a_api_deve_atualizar_o_review_do_cliente_com_os_novos_dados_informados() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Então("a API deve retornar o review atualizado")
+    public void a_api_deve_retornar_o_review_atualizado(Map<String, String> table) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
