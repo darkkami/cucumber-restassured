@@ -4,6 +4,7 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import io.restassured.http.ContentType;
+import org.json.JSONObject;
 
 import java.util.Map;
 
@@ -15,6 +16,15 @@ public class UpdateProductReviewStepDefinitions {
 
     public UpdateProductReviewStepDefinitions(CucumberWorld cucumberWorld) {
         this.cucumberWorld = cucumberWorld;
+    }
+
+    public JSONObject createReviewJson(int customerId, String date, String description, String rating) {
+        JSONObject review = new JSONObject();
+        review.put("customerId", customerId);
+        review.put("date", date);
+        review.put("description", description);
+        review.put("rating", rating);
+        return review;
     }
 
     @Dado("Usuário entra na aplicação Multibags")
@@ -73,6 +83,11 @@ public class UpdateProductReviewStepDefinitions {
     public void o_product_id_informado_não_existe_no_sistema() {
         cucumberWorld.addToNotes("reviewId", "1");
         cucumberWorld.addToNotes("productId", "99999999999");
+
+        JSONObject requestBody = createReviewJson(1, "2021-10-10", "Teste", "5");
+        cucumberWorld.setResponse(cucumberWorld.getRequest()
+                .body(requestBody.toString())
+                .when().post("/api/v1/customer/login"));
     }
 
     @Dado("o review está preenchido com os dados da avaliação")
