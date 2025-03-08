@@ -13,6 +13,7 @@ import static io.restassured.RestAssured.given;
 public class UpdateProductReviewStepDefinitions {
 
     private final CucumberWorld cucumberWorld;
+    private JSONObject requestBody = new JSONObject();
 
     public UpdateProductReviewStepDefinitions(CucumberWorld cucumberWorld) {
         this.cucumberWorld = cucumberWorld;
@@ -56,6 +57,7 @@ public class UpdateProductReviewStepDefinitions {
         String reviewId = cucumberWorld.getFromNotes("reviewId");
         cucumberWorld.setResponse(cucumberWorld.getRequest()
                 .when().header("Authorization", "Bearer " + token)
+                .body(requestBody.toString())
                 .put("/api/v1/auth/products/"+ productId + "/reviews/" + reviewId));
     }
 
@@ -83,17 +85,12 @@ public class UpdateProductReviewStepDefinitions {
     public void o_product_id_informado_não_existe_no_sistema() {
         cucumberWorld.addToNotes("reviewId", "1");
         cucumberWorld.addToNotes("productId", "99999999999");
-
-        JSONObject requestBody = createReviewJson(1, "2021-10-10", "Teste", "5");
-        cucumberWorld.setResponse(cucumberWorld.getRequest()
-                .body(requestBody.toString())
-                .when().post("/api/v1/customer/login"));
     }
 
     @Dado("o review está preenchido com os dados da avaliação")
     public void o_review_está_preenchido_com_os_dados_da_avaliação() {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        requestBody = createReviewJson(1, "2021-10-10", "Teste", "5");
     }
 
     @Dado("o <reviewId> informado não existe no sistema")
