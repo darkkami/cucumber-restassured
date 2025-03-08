@@ -38,8 +38,7 @@ public class UpdateProductReviewStepDefinitions {
 
     @Dado("Um produto com ID definido")
     public void um_produto_com_id_definido() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        cucumberWorld.addToNotes("productId", "1");
     }
 
     @Dado("usuário que não está autenticado")
@@ -95,14 +94,12 @@ public class UpdateProductReviewStepDefinitions {
 
     @Dado("o <reviewId> informado não existe no sistema")
     public void o_review_id_informado_não_existe_no_sistema() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        cucumberWorld.addToNotes("reviewId", "9999999999999");
     }
 
     @Dado("o <reviewId> informado existe no sistema, porém foi criado por outro usuário")
     public void o_review_id_informado_existe_no_sistema_porém_foi_criado_por_outro_usuário() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        cucumberWorld.addToNotes("reviewId", "843");
     }
 
     @Dado("o produto já tem um review criado pelo usuário")
