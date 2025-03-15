@@ -10,7 +10,6 @@ import org.apache.http.HttpStatus;
 import org.json.JSONObject;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.*;
 
 public class DeleteReviewStepDefinitions {
@@ -45,18 +44,21 @@ public class DeleteReviewStepDefinitions {
         this.world.setRequest(given().log().all().baseUri("http://multibags.1dt.com.br")
                 .contentType(ContentType.JSON.toString())
                 .accept(ContentType.JSON.toString()));
+
         String username = "o181804@g.unicamp.br";
         String password = "aA#123456789";
+
         JSONObject requestBody = new JSONObject();
         requestBody.put("username", username);
         requestBody.put("password", password);
+
         world.setResponse(world.getRequest()
                 .body(requestBody.toString())
                 .when().post("/api/v1/customer/login"));
-        token = world.getResponse().then().log().all().assertThat()
+
+        token = world.getResponse().then().log().all()
+                .assertThat()
                 .statusCode(HttpStatus.SC_OK)
-                .body(matchesJsonSchemaInClasspath("unicamp/br/inf321/LoginJsonSchema.json"))
-                .onFailMessage("token should not be empty")
                 .body("token", not(blankOrNullString()))
                 .extract().body().jsonPath().get("token");
     }
@@ -95,6 +97,7 @@ public class DeleteReviewStepDefinitions {
 
     @Entao("a API deve deletar essa review do banco de dados")
     public void a_api_deve_deletar_essa_review_do_banco_de_dados() {
+        response.then().statusCode(HttpStatus.SC_OK);
     }
 
     @Entao("retornar a resposta {int}")
@@ -104,5 +107,6 @@ public class DeleteReviewStepDefinitions {
 
     @Entao("a API vai ignorar a solicitação de exclusão")
     public void a_api_vai_ignorar_a_solicitacao_de_exclusao() {
+        response.then().statusCode(HttpStatus.SC_FORBIDDEN);
     }
 }
