@@ -28,6 +28,7 @@ public class CreateProductReviewStepDefinitions {
     public void usuarioEstaAutenticado(Map<String, String> table) {
         this.cucumberWorld.addToNotes("email", table.get("email"));
         this.cucumberWorld.addToNotes("password", table.get("password"));
+        this.cucumberWorld.addToNotes("customerId", 756);
 
         // reusing already existent steps to avoid code duplication
         LoginStepDefinitions loginStepDefinitions = new LoginStepDefinitions(cucumberWorld);

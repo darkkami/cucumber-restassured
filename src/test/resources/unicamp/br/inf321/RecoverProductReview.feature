@@ -7,7 +7,7 @@ Funcionalidade: Recuperar um review
       | productId    | 10 |
     E o review do produto está disponível
     Quando o usuário solicitar a recuperação do review pelo ID <reviewId> do produto
-    Então a API deve retornar a resposta 200
+    Então a API deve retornar resposta 200
     E retornar o JSON com os detalhes do review, incluindo campos como customerId, date, description, rating
     Exemplos:
       | id | reviewId | customerID | date       | description           | rating | resposta |
@@ -23,7 +23,7 @@ Funcionalidade: Recuperar um review
       | productId   | 9999999999999 |
       | reviewId    | 1109 |
     Quando o usuário solicitar a recuperação do review pelo ID 999 do produto
-    Então a API deve retornar a resposta 404
+    Então a API deve retornar resposta 404
     Exemplos:
     | id  | resposta |
     | 999 | 404      |
@@ -31,7 +31,7 @@ Funcionalidade: Recuperar um review
   Esquema do Cenário: Recuperação de review sem autorização
     Dado que o usuário não está autenticado
     Quando o usuário solicitar a recuperação do review pelo ID <id> do produto
-    Então a API deve retornar a resposta 401
+    Então a API deve retornar resposta 401
     Exemplos:
     | id | resposta |
     | 10 | 401      |
@@ -40,7 +40,7 @@ Funcionalidade: Recuperar um review
     Dado Usuário entra na aplicação Multibags
     E o usuário está autenticado, mas não tem permissão para acessar o review
     Quando o usuário solicitar a recuperação do review pelo ID <id> do produto
-    Então a API deve retornar a resposta 403
+    Então a API deve retornar resposta 403
     Exemplos:
     | id | resposta |
     | 10 | 403      |

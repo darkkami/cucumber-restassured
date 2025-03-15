@@ -58,7 +58,7 @@ public class RecoverProductReviewStepDefinitions {
         lastResponseBody = new JSONObject(response.body().asString());
     }
 
-    @Então("a API deve retornar a resposta {int}")
+    @Então("a API deve retornar resposta {int}")
     public void a_api_deve_retornar_a_resposta(Integer expectedStatus) {
         assert lastResponseStatus == expectedStatus;
     }
