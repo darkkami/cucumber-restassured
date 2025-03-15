@@ -57,7 +57,7 @@ Funcionalidade: Atualizar um review (Endpoint /api/v1/auth/products/{id}/reviews
     Quando o usuário enviar a request
     Então a API deve retornar o HTTP Code 404
 
-  Esquema do Cenário: Atualização de review com sucesso
+  Cenário: Atualização de review com sucesso
     Dado Usuário entra na aplicação Multibags
     E Um produto com ID existente
       | productId    | 6 |
