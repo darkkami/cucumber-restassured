@@ -29,6 +29,7 @@ public class CreateProductReviewStepDefinitions {
     public void usuarioEstaAutenticado(Map<String, String> table) {
         this.cucumberWorld.addToNotes("email", table.get("email"));
         this.cucumberWorld.addToNotes("password", table.get("password"));
+        this.cucumberWorld.addToNotes("customerId", 756);
 
         LoginStepDefinitions loginStepDefinitions = new LoginStepDefinitions(cucumberWorld);
         loginStepDefinitions.isRegisteredOnTheMultibagsWebsite();
