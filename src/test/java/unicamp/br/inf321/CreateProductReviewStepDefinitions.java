@@ -9,6 +9,7 @@ import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
 import org.json.JSONObject;
 
+import java.util.Date;
 import java.util.Map;
 import java.util.Optional;
 
@@ -29,7 +30,7 @@ public class CreateProductReviewStepDefinitions {
     public void usuarioEstaAutenticado(Map<String, String> table) {
         this.cucumberWorld.addToNotes("email", table.get("email"));
         this.cucumberWorld.addToNotes("password", table.get("password"));
-        this.cucumberWorld.addToNotes("customerId", 756);
+        this.cucumberWorld.addToNotes("customerId", new Date().getTime());
 
         LoginStepDefinitions loginStepDefinitions = new LoginStepDefinitions(cucumberWorld);
         loginStepDefinitions.isRegisteredOnTheMultibagsWebsite();
@@ -37,20 +38,30 @@ public class CreateProductReviewStepDefinitions {
         loginStepDefinitions.shouldBeLoggedWithSuccess();
     }
 
+    @Dado("o usuário não está autenticado")
+    public void usuarioNaoEstaAutenticado(Map<String, String> table) {
+        this.cucumberWorld.setRequest(given().log().all().baseUri("http://multibags.1dt.com.br")
+                .contentType(ContentType.JSON.toString())
+                .accept(ContentType.JSON.toString())
+        );
+        this.cucumberWorld.addToNotes("token", "");
+        this.cucumberWorld.addToNotes("customerId", new Date().getTime());
+    }
+
+    @Dado("o usuário não tem permissão para registrar um review")
+    public void usuarioNaoTemPermissao() {
+        this.cucumberWorld.addToNotes("customerId", new Date().getTime());
+    }
+
     @Quando("o usuário informar um comentário e uma nota")
     public void usuarioInformaComentarioENota(Map<String, String> table) {
-        String token = (String) Optional.ofNullable(cucumberWorld.getFromNotes("token"))
-                .orElseThrow(() -> new IllegalStateException("Token não encontrado no contexto do Cucumber"));
-        Integer customerId = (Integer) Optional.ofNullable(cucumberWorld.getFromNotes("customerId"))
-                .orElseThrow(() -> new IllegalStateException("CustomerId não encontrado no contexto do Cucumber"));
-        Integer productId = Optional.ofNullable(table.get("id"))
-                .map(Integer::parseInt)
-                .orElseThrow(() -> new IllegalArgumentException("ID do produto não pode ser nulo"));
-        String description = Optional.ofNullable(table.get("description"))
-                .orElseThrow(() -> new IllegalArgumentException("Descrição não pode ser nula"));
-        double rating = Optional.ofNullable(table.get("rating"))
-                .map(Double::parseDouble)
-                .orElseThrow(() -> new IllegalArgumentException("Nota não pode ser nula"));
+        String token = cucumberWorld.getFromNotes("token");
+        Long customerId = cucumberWorld.getFromNotes("customerId");
+        int productId = Integer.parseInt(table.get("id"));
+        String description = table.get("description");
+        double rating = Double.parseDouble(table.get("rating"));
+        String date = table.get("date");
+        String language = table.get("language");
 
         JSONObject review = new JSONObject();
         review.put("customerId", customerId);
