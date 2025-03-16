@@ -9,6 +9,7 @@ import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
 import org.json.JSONObject;
 
+import java.util.Date;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
@@ -28,7 +29,7 @@ public class CreateProductReviewStepDefinitions {
     public void usuarioEstaAutenticado(Map<String, String> table) {
         this.cucumberWorld.addToNotes("email", table.get("email"));
         this.cucumberWorld.addToNotes("password", table.get("password"));
-        this.cucumberWorld.addToNotes("customerId", 756);
+        this.cucumberWorld.addToNotes("customerId", new Date().getTime());
 
         // reusing already existent steps to avoid code duplication
         LoginStepDefinitions loginStepDefinitions = new LoginStepDefinitions(cucumberWorld);
@@ -45,18 +46,18 @@ public class CreateProductReviewStepDefinitions {
                 .accept(ContentType.JSON.toString())
         );
         this.cucumberWorld.addToNotes("token", "");
-        this.cucumberWorld.addToNotes("customerId", 756);
+        this.cucumberWorld.addToNotes("customerId", new Date().getTime());
     }
 
     @Dado("o usuário não tem permissão para registrar um review")
     public void usuarioNaoTemPermissao() {
-        this.cucumberWorld.addToNotes("customerId", 1234);
+        this.cucumberWorld.addToNotes("customerId", new Date().getTime());
     }
 
     @Quando("o usuário informar um comentário e uma nota")
     public void usuarioInformaComentarioENota(Map<String, String> table) {
         String token = cucumberWorld.getFromNotes("token");
-        int customerId = cucumberWorld.getFromNotes("customerId");
+        Long customerId = cucumberWorld.getFromNotes("customerId");
         int productId = Integer.parseInt(table.get("id"));
         String description = table.get("description");
         double rating = Double.parseDouble(table.get("rating"));
