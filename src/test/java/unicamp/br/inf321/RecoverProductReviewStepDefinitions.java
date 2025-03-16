@@ -4,6 +4,7 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import io.restassured.http.ContentType;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.Map;
@@ -15,19 +16,10 @@ public class RecoverProductReviewStepDefinitions {
 
     private final CucumberWorld cucumberWorld;
     private int lastResponseStatus;
-    private JSONObject lastResponseBody;
+    private String lastResponseBody;
 
     public RecoverProductReviewStepDefinitions(CucumberWorld cucumberWorld) {
         this.cucumberWorld = cucumberWorld;
-    }
-
-    public JSONObject createReviewJson(int customerId, String date, String description, String rating) {
-        JSONObject review = new JSONObject();
-        review.put("customerId", customerId);
-        review.put("date", date);
-        review.put("description", description);
-        review.put("rating", rating);
-        return review;
     }
 
     @Dado("um produto com ID existe")
@@ -41,21 +33,17 @@ public class RecoverProductReviewStepDefinitions {
         cucumberWorld.addToNotes("reviewId", "150");
     }
 
-    @Quando("o usuário solicitar a recuperação do review pelo ID {int} do produto")
-    public void o_usuário_solicitar_a_recuperação_do_review_pelo_id_do_produto(Integer reviewId) {
+    @Quando("o usuário solicitar a recuperação dos reviews do produto")
+    public void o_usuário_solicitar_a_recuperação_do_review_pelo_id_do_produto() {
         String productId = cucumberWorld.getFromNotes("productId");
-        String token = cucumberWorld.getFromNotes("token");
 
-        var response = given()
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer " + token)
+        cucumberWorld.setResponse(cucumberWorld.getRequest()
                 .when()
-                .get("/api/v1/auth/products/" + productId + "/reviews/" + reviewId)
-                .then()
-                .extract();
+                .get("/api/v1/products/" + productId + "/reviews"));
 
-        lastResponseStatus = response.statusCode();
-        lastResponseBody = new JSONObject(response.body().asString());
+        lastResponseStatus = cucumberWorld.getResponse().statusCode();
+        System.out.println(cucumberWorld.getResponse().body().asString());
+        lastResponseBody = cucumberWorld.getResponse().body().asString();
     }
 
     @Então("a API deve retornar resposta {int}")
@@ -65,26 +53,17 @@ public class RecoverProductReviewStepDefinitions {
 
     @Então("retornar o JSON com os detalhes do review, incluindo campos como customerId, date, description, rating")
     public void retornar_o_json_com_os_detalhes_do_review_incluindo_campos_como_customer_id_date_description_rating() {
-        lastResponseBody.getInt("customerId");
-        lastResponseBody.getString("date");
-        lastResponseBody.getString("description");
-        lastResponseBody.getInt("rating");
+        System.out.println(lastResponseBody);
+
+        JSONArray jsonArray = new JSONArray(lastResponseBody);
+        jsonArray.getJSONObject(0).getJSONObject("customer").getInt("id");
+        jsonArray.getJSONObject(0).getString("date");
+        jsonArray.getJSONObject(0).getString("description");
+        jsonArray.getJSONObject(0).getInt("rating");
     }
 
     @Dado("um produto com ID {int} não existe")
     public void um_produto_com_id_não_existe(Integer productId) {
         cucumberWorld.addToNotes("productId", String.valueOf(productId));
-    }
-
-    @Dado("que o usuário não está autenticado")
-    public void que_o_usuário_não_está_autenticado() {
-        cucumberWorld.addToNotes("token", "");
-        cucumberWorld.addToNotes("productId", "1");
-        cucumberWorld.addToNotes("reviewId", "1");
-    }
-
-    @Dado("o usuário está autenticado, mas não tem permissão para acessar o review")
-    public void o_usuário_está_autenticado_mas_não_tem_permissão_para_acessar_o_review() {
-        cucumberWorld.addToNotes("token", "INVALID_TOKEN");
     }
 }
