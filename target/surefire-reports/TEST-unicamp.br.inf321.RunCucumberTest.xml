@@ -1,209 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="unicamp.br.inf321.RunCucumberTest" time="8.903" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="unicamp.br.inf321.RunCucumberTest" time="0.111" tests="12" errors="12" skipped="0" failures="0">
   <properties>
-    <property name="java.specification.version" value="21"/>
+    <property name="java.specification.version" value="23"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/kamikase/Documentos/Especialização Engenharia de Software/INF321 - Verificação e Validação de Software/Aula 06/cucumber-restassured/target/test-classes:/home/kamikase/Documentos/Especialização Engenharia de Software/INF321 - Verificação e Validação de Software/Aula 06/cucumber-restassured/target/classes:/home/kamikase/.m2/repository/io/cucumber/cucumber-java/7.14.0/cucumber-java-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-core/7.14.0/cucumber-core-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-gherkin/7.14.0/cucumber-gherkin-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.0/cucumber-gherkin-messages-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/home/kamikase/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/home/kamikase/.m2/repository/io/cucumber/tag-expressions/5.0.6/tag-expressions-5.0.6.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/home/kamikase/.m2/repository/io/cucumber/datatable/7.14.0/datatable-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-plugin/7.14.0/cucumber-plugin-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/docstring/7.14.0/docstring-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/home/kamikase/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/home/kamikase/.m2/repository/io/cucumber/ci-environment/9.2.0/ci-environment-9.2.0.jar:/home/kamikase/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.14.0/cucumber-junit-platform-engine-7.14.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/home/kamikase/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-suite/1.10.0/junit-platform-suite-1.10.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.0/junit-platform-suite-api-1.10.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.0/junit-platform-suite-engine-1.10.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.0/junit-platform-suite-commons-1.10.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.0/junit-platform-launcher-1.10.0.jar:/home/kamikase/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/home/kamikase/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/home/kamikase/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/home/kamikase/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/home/kamikase/.m2/repository/io/rest-assured/rest-assured/5.3.2/rest-assured-5.3.2.jar:/home/kamikase/.m2/repository/org/apache/groovy/groovy/4.0.11/groovy-4.0.11.jar:/home/kamikase/.m2/repository/org/apache/groovy/groovy-xml/4.0.11/groovy-xml-4.0.11.jar:/home/kamikase/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/kamikase/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/kamikase/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/kamikase/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/kamikase/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/kamikase/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/kamikase/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/kamikase/.m2/repository/io/rest-assured/json-path/5.3.2/json-path-5.3.2.jar:/home/kamikase/.m2/repository/org/apache/groovy/groovy-json/4.0.11/groovy-json-4.0.11.jar:/home/kamikase/.m2/repository/io/rest-assured/rest-assured-common/5.3.2/rest-assured-common-5.3.2.jar:/home/kamikase/.m2/repository/io/rest-assured/xml-path/5.3.2/xml-path-5.3.2.jar:/home/kamikase/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/kamikase/.m2/repository/io/rest-assured/json-schema-validator/5.3.2/json-schema-validator-5.3.2.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.14/json-schema-validator-2.2.14.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/jackson-coreutils-equivalence/1.0/jackson-coreutils-equivalence-1.0.jar:/home/kamikase/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.0/jackson-databind-2.11.0.jar:/home/kamikase/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.0/jackson-annotations-2.11.0.jar:/home/kamikase/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.0/jackson-core-2.11.0.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/jackson-coreutils/2.0/jackson-coreutils-2.0.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/msg-simple/1.2/msg-simple-1.2.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/btf/1.3/btf-1.3.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.14/json-schema-core-1.2.14.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/uri-template/0.10/uri-template-0.10.jar:/home/kamikase/.m2/repository/org/mozilla/rhino/1.7.7.2/rhino-1.7.7.2.jar:/home/kamikase/.m2/repository/com/sun/mail/mailapi/1.6.2/mailapi-1.6.2.jar:/home/kamikase/.m2/repository/joda-time/joda-time/2.10.5/joda-time-2.10.5.jar:/home/kamikase/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.11.1/libphonenumber-8.11.1.jar:/home/kamikase/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/kamikase/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/home/kamikase/.m2/repository/com/google/guava/guava/32.0.1-jre/guava-32.0.1-jre.jar:/home/kamikase/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/kamikase/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/kamikase/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/home/kamikase/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/home/kamikase/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-picocontainer/7.14.0/cucumber-picocontainer-7.14.0.jar:/home/kamikase/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/home/kamikase/.m2/repository/org/json/json/20141113/json-20141113.jar:"/>
-    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="java.class.path" value="/Users/vicsb/cucumber-restassured/target/test-classes:/Users/vicsb/cucumber-restassured/target/classes:/Users/vicsb/.m2/repository/io/cucumber/cucumber-java/7.14.0/cucumber-java-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-core/7.14.0/cucumber-core-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-gherkin/7.14.0/cucumber-gherkin-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.0/cucumber-gherkin-messages-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/vicsb/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/vicsb/.m2/repository/io/cucumber/tag-expressions/5.0.6/tag-expressions-5.0.6.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/vicsb/.m2/repository/io/cucumber/datatable/7.14.0/datatable-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-plugin/7.14.0/cucumber-plugin-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/docstring/7.14.0/docstring-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/vicsb/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/vicsb/.m2/repository/io/cucumber/ci-environment/9.2.0/ci-environment-9.2.0.jar:/Users/vicsb/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.14.0/cucumber-junit-platform-engine-7.14.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/vicsb/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-suite/1.10.0/junit-platform-suite-1.10.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.0/junit-platform-suite-api-1.10.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.0/junit-platform-suite-engine-1.10.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.0/junit-platform-suite-commons-1.10.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.0/junit-platform-launcher-1.10.0.jar:/Users/vicsb/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/Users/vicsb/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/vicsb/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/Users/vicsb/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/vicsb/.m2/repository/io/rest-assured/rest-assured/5.3.2/rest-assured-5.3.2.jar:/Users/vicsb/.m2/repository/org/apache/groovy/groovy/4.0.11/groovy-4.0.11.jar:/Users/vicsb/.m2/repository/org/apache/groovy/groovy-xml/4.0.11/groovy-xml-4.0.11.jar:/Users/vicsb/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/vicsb/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/vicsb/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/vicsb/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/vicsb/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/vicsb/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/vicsb/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/vicsb/.m2/repository/io/rest-assured/json-path/5.3.2/json-path-5.3.2.jar:/Users/vicsb/.m2/repository/org/apache/groovy/groovy-json/4.0.11/groovy-json-4.0.11.jar:/Users/vicsb/.m2/repository/io/rest-assured/rest-assured-common/5.3.2/rest-assured-common-5.3.2.jar:/Users/vicsb/.m2/repository/io/rest-assured/xml-path/5.3.2/xml-path-5.3.2.jar:/Users/vicsb/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/vicsb/.m2/repository/io/rest-assured/json-schema-validator/5.3.2/json-schema-validator-5.3.2.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.14/json-schema-validator-2.2.14.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/jackson-coreutils-equivalence/1.0/jackson-coreutils-equivalence-1.0.jar:/Users/vicsb/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.0/jackson-databind-2.11.0.jar:/Users/vicsb/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.0/jackson-annotations-2.11.0.jar:/Users/vicsb/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.0/jackson-core-2.11.0.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/jackson-coreutils/2.0/jackson-coreutils-2.0.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/msg-simple/1.2/msg-simple-1.2.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/btf/1.3/btf-1.3.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.14/json-schema-core-1.2.14.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/uri-template/0.10/uri-template-0.10.jar:/Users/vicsb/.m2/repository/org/mozilla/rhino/1.7.7.2/rhino-1.7.7.2.jar:/Users/vicsb/.m2/repository/com/sun/mail/mailapi/1.6.2/mailapi-1.6.2.jar:/Users/vicsb/.m2/repository/joda-time/joda-time/2.10.5/joda-time-2.10.5.jar:/Users/vicsb/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.11.1/libphonenumber-8.11.1.jar:/Users/vicsb/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/vicsb/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/vicsb/.m2/repository/com/google/guava/guava/32.0.1-jre/guava-32.0.1-jre.jar:/Users/vicsb/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/vicsb/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/vicsb/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/Users/vicsb/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/Users/vicsb/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-picocontainer/7.14.0/cucumber-picocontainer-7.14.0.jar:/Users/vicsb/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/Users/vicsb/.m2/repository/org/json/json/20141113/json-20141113.jar:"/>
+    <property name="java.vm.vendor" value="Azul Systems, Inc."/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="java.vendor.url" value="http://www.azul.com/"/>
     <property name="user.timezone" value="America/Sao_Paulo"/>
-    <property name="os.name" value="Linux"/>
-    <property name="java.vm.specification.version" value="21"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="23"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
-    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/kamikase/Documentos/Especialização Engenharia de Software/INF321 - Verificação e Validação de Software/Aula 06/cucumber-restassured/target/surefire/surefirebooter-20250222095012444_3.jar /home/kamikase/Documentos/Especialização Engenharia de Software/INF321 - Verificação e Validação de Software/Aula 06/cucumber-restassured/target/surefire 2025-02-22T09-50-08_187-jvmRun1 surefire-20250222095012444_1tmp surefire_0-20250222095012444_2tmp"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/zulu-23.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/vicsb/cucumber-restassured/target/surefire/surefirebooter-20250315184224452_3.jar /Users/vicsb/cucumber-restassured/target/surefire 2025-03-15T18-42-24_416-jvmRun1 surefire-20250315184224452_1tmp surefire_0-20250315184224452_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/home/kamikase/Documentos/Especialização Engenharia de Software/INF321 - Verificação e Validação de Software/Aula 06/cucumber-restassured/target/test-classes:/home/kamikase/Documentos/Especialização Engenharia de Software/INF321 - Verificação e Validação de Software/Aula 06/cucumber-restassured/target/classes:/home/kamikase/.m2/repository/io/cucumber/cucumber-java/7.14.0/cucumber-java-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-core/7.14.0/cucumber-core-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-gherkin/7.14.0/cucumber-gherkin-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.0/cucumber-gherkin-messages-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/home/kamikase/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/home/kamikase/.m2/repository/io/cucumber/tag-expressions/5.0.6/tag-expressions-5.0.6.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/home/kamikase/.m2/repository/io/cucumber/datatable/7.14.0/datatable-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-plugin/7.14.0/cucumber-plugin-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/docstring/7.14.0/docstring-7.14.0.jar:/home/kamikase/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/home/kamikase/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/home/kamikase/.m2/repository/io/cucumber/ci-environment/9.2.0/ci-environment-9.2.0.jar:/home/kamikase/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.14.0/cucumber-junit-platform-engine-7.14.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/home/kamikase/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-suite/1.10.0/junit-platform-suite-1.10.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.0/junit-platform-suite-api-1.10.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.0/junit-platform-suite-engine-1.10.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.0/junit-platform-suite-commons-1.10.0.jar:/home/kamikase/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.0/junit-platform-launcher-1.10.0.jar:/home/kamikase/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/home/kamikase/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/home/kamikase/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/home/kamikase/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/home/kamikase/.m2/repository/io/rest-assured/rest-assured/5.3.2/rest-assured-5.3.2.jar:/home/kamikase/.m2/repository/org/apache/groovy/groovy/4.0.11/groovy-4.0.11.jar:/home/kamikase/.m2/repository/org/apache/groovy/groovy-xml/4.0.11/groovy-xml-4.0.11.jar:/home/kamikase/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/kamikase/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/kamikase/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/kamikase/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/kamikase/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/kamikase/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/kamikase/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/kamikase/.m2/repository/io/rest-assured/json-path/5.3.2/json-path-5.3.2.jar:/home/kamikase/.m2/repository/org/apache/groovy/groovy-json/4.0.11/groovy-json-4.0.11.jar:/home/kamikase/.m2/repository/io/rest-assured/rest-assured-common/5.3.2/rest-assured-common-5.3.2.jar:/home/kamikase/.m2/repository/io/rest-assured/xml-path/5.3.2/xml-path-5.3.2.jar:/home/kamikase/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/kamikase/.m2/repository/io/rest-assured/json-schema-validator/5.3.2/json-schema-validator-5.3.2.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.14/json-schema-validator-2.2.14.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/jackson-coreutils-equivalence/1.0/jackson-coreutils-equivalence-1.0.jar:/home/kamikase/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.0/jackson-databind-2.11.0.jar:/home/kamikase/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.0/jackson-annotations-2.11.0.jar:/home/kamikase/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.0/jackson-core-2.11.0.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/jackson-coreutils/2.0/jackson-coreutils-2.0.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/msg-simple/1.2/msg-simple-1.2.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/btf/1.3/btf-1.3.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.14/json-schema-core-1.2.14.jar:/home/kamikase/.m2/repository/com/github/java-json-tools/uri-template/0.10/uri-template-0.10.jar:/home/kamikase/.m2/repository/org/mozilla/rhino/1.7.7.2/rhino-1.7.7.2.jar:/home/kamikase/.m2/repository/com/sun/mail/mailapi/1.6.2/mailapi-1.6.2.jar:/home/kamikase/.m2/repository/joda-time/joda-time/2.10.5/joda-time-2.10.5.jar:/home/kamikase/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.11.1/libphonenumber-8.11.1.jar:/home/kamikase/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/kamikase/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/home/kamikase/.m2/repository/com/google/guava/guava/32.0.1-jre/guava-32.0.1-jre.jar:/home/kamikase/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/kamikase/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/kamikase/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/home/kamikase/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/home/kamikase/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/home/kamikase/.m2/repository/io/cucumber/cucumber-picocontainer/7.14.0/cucumber-picocontainer-7.14.0.jar:/home/kamikase/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/home/kamikase/.m2/repository/org/json/json/20141113/json-20141113.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/vicsb/cucumber-restassured/target/test-classes:/Users/vicsb/cucumber-restassured/target/classes:/Users/vicsb/.m2/repository/io/cucumber/cucumber-java/7.14.0/cucumber-java-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-core/7.14.0/cucumber-core-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-gherkin/7.14.0/cucumber-gherkin-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.0/cucumber-gherkin-messages-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/vicsb/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/vicsb/.m2/repository/io/cucumber/tag-expressions/5.0.6/tag-expressions-5.0.6.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/vicsb/.m2/repository/io/cucumber/datatable/7.14.0/datatable-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-plugin/7.14.0/cucumber-plugin-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/docstring/7.14.0/docstring-7.14.0.jar:/Users/vicsb/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/vicsb/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/vicsb/.m2/repository/io/cucumber/ci-environment/9.2.0/ci-environment-9.2.0.jar:/Users/vicsb/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.14.0/cucumber-junit-platform-engine-7.14.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/vicsb/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-suite/1.10.0/junit-platform-suite-1.10.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.0/junit-platform-suite-api-1.10.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.0/junit-platform-suite-engine-1.10.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.0/junit-platform-suite-commons-1.10.0.jar:/Users/vicsb/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.0/junit-platform-launcher-1.10.0.jar:/Users/vicsb/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/Users/vicsb/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/vicsb/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/Users/vicsb/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/vicsb/.m2/repository/io/rest-assured/rest-assured/5.3.2/rest-assured-5.3.2.jar:/Users/vicsb/.m2/repository/org/apache/groovy/groovy/4.0.11/groovy-4.0.11.jar:/Users/vicsb/.m2/repository/org/apache/groovy/groovy-xml/4.0.11/groovy-xml-4.0.11.jar:/Users/vicsb/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/vicsb/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/vicsb/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/vicsb/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/vicsb/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/vicsb/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/vicsb/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/vicsb/.m2/repository/io/rest-assured/json-path/5.3.2/json-path-5.3.2.jar:/Users/vicsb/.m2/repository/org/apache/groovy/groovy-json/4.0.11/groovy-json-4.0.11.jar:/Users/vicsb/.m2/repository/io/rest-assured/rest-assured-common/5.3.2/rest-assured-common-5.3.2.jar:/Users/vicsb/.m2/repository/io/rest-assured/xml-path/5.3.2/xml-path-5.3.2.jar:/Users/vicsb/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/vicsb/.m2/repository/io/rest-assured/json-schema-validator/5.3.2/json-schema-validator-5.3.2.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.14/json-schema-validator-2.2.14.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/jackson-coreutils-equivalence/1.0/jackson-coreutils-equivalence-1.0.jar:/Users/vicsb/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.0/jackson-databind-2.11.0.jar:/Users/vicsb/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.0/jackson-annotations-2.11.0.jar:/Users/vicsb/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.0/jackson-core-2.11.0.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/jackson-coreutils/2.0/jackson-coreutils-2.0.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/msg-simple/1.2/msg-simple-1.2.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/btf/1.3/btf-1.3.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.14/json-schema-core-1.2.14.jar:/Users/vicsb/.m2/repository/com/github/java-json-tools/uri-template/0.10/uri-template-0.10.jar:/Users/vicsb/.m2/repository/org/mozilla/rhino/1.7.7.2/rhino-1.7.7.2.jar:/Users/vicsb/.m2/repository/com/sun/mail/mailapi/1.6.2/mailapi-1.6.2.jar:/Users/vicsb/.m2/repository/joda-time/joda-time/2.10.5/joda-time-2.10.5.jar:/Users/vicsb/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.11.1/libphonenumber-8.11.1.jar:/Users/vicsb/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/vicsb/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/vicsb/.m2/repository/com/google/guava/guava/32.0.1-jre/guava-32.0.1-jre.jar:/Users/vicsb/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/vicsb/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/vicsb/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/Users/vicsb/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/Users/vicsb/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/vicsb/.m2/repository/io/cucumber/cucumber-picocontainer/7.14.0/cucumber-picocontainer-7.14.0.jar:/Users/vicsb/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/Users/vicsb/.m2/repository/org/json/json/20141113/json-20141113.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="/home/kamikase"/>
+    <property name="user.home" value="/Users/vicsb"/>
     <property name="user.language" value="pt"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2025-01-21"/>
-    <property name="java.home" value="/usr/lib/jvm/java-21-openjdk-amd64"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/zulu-23.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/home/kamikase/Documentos/Especialização Engenharia de Software/INF321 - Verificação e Validação de Software/Aula 06/cucumber-restassured"/>
-    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="basedir" value="/Users/vicsb/cucumber-restassured"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/kamikase/Documentos/Especialização Engenharia de Software/INF321 - Verificação e Validação de Software/Aula 06/cucumber-restassured/target/surefire/surefirebooter-20250222095012444_3.jar"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/vicsb/cucumber-restassured/target/surefire/surefirebooter-20250315184224452_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="21.0.6+7-Ubuntu-124.04.1"/>
-    <property name="user.name" value="kamikase"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="23.0.1+11"/>
+    <property name="user.name" value="vicsb"/>
     <property name="stdout.encoding" value="UTF-8"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="6.8.0-53-generic"/>
+    <property name="os.version" value="15.2"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="localRepository" value="/home/kamikase/.m2/repository"/>
-    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-21"/>
-    <property name="java.io.tmpdir" value="/tmp"/>
-    <property name="idea.version" value="2024.2.4"/>
-    <property name="java.version" value="21.0.6"/>
-    <property name="user.dir" value="/home/kamikase/Documentos/Especialização Engenharia de Software/INF321 - Verificação e Validação de Software/Aula 06/cucumber-restassured"/>
-    <property name="os.arch" value="amd64"/>
+    <property name="java.vendor.version" value="Zulu23.30+13-CA"/>
+    <property name="localRepository" value="/Users/vicsb/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://www.azul.com/support/"/>
+    <property name="java.io.tmpdir" value="/var/folders/_r/68_lm5bx6h79h29y7c13b6jm0000gn/T/"/>
+    <property name="idea.version" value="2024.3.2"/>
+    <property name="java.version" value="23.0.1"/>
+    <property name="user.dir" value="/Users/vicsb/cucumber-restassured"/>
+    <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.library.path" value="/Users/vicsb/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="UTF-8"/>
-    <property name="java.vendor" value="Ubuntu"/>
-    <property name="java.vm.version" value="21.0.6+7-Ubuntu-124.04.1"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="65.0"/>
+    <property name="java.vendor" value="Azul Systems, Inc."/>
+    <property name="java.vm.version" value="23.0.1+11"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="Should show customer profile" classname="Customer Profile" time="7.952">
-    <system-out><![CDATA[
-Scenario: Should show customer profile              &amp#27;[90m# unicamp/br/inf321/CustomerProfile.feature:6&amp#27;[0m
-Request method:	POST
-Request URI:	http://multibags.1dt.com.br/api/v1/customer/login
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "password": "aA#123456789",
-    "username": "o181804@g.unicamp.br"
-}
-HTTP/1.1 200 
-Date: Sat, 22 Feb 2025 12:50:19 GMT
-Server: Apache/2.4.29 (Ubuntu)
-Access-Control-Allow-Methods: POST, GET, PUT, OPTIONS, DELETE
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Headers: X-Auth-Token, Content-Type, Authorization
-Access-Control-Allow-Credentials: true
-Content-Type: application/json;charset=UTF-8
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Transfer-Encoding: chunked
-
-{
-    "id": 654,
-    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJvMTgxODA0QGcudW5pY2FtcC5iciIsImF1ZCI6InVua25vd24iLCJleHAiOjE3NDA4MzM0MTksImlhdCI6MTc0MDIyODYxOX0.J5tD3s1i3xiC5LINtUCJTgFBJnlpUnuccm3GbbrbxZvJxClgu0ayCDJ2p8eqrfOVuC8ROP5Sval8-Ps3_35vUw"
-}
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mJhon is logged on the multibags application&amp#27;[0m &amp#27;[90m# unicamp.br.inf321.LoginStepDefinitions.jhonIsLoggedOnTheMultibagsApplication(java.util.Map<java.lang.String, java.lang.String>)&amp#27;[0m
-    | email    | o181804@g.unicamp.br |
-    | password | aA#123456789         |
-Request method:	GET
-Request URI:	http://multibags.1dt.com.br/api/v1/auth/customers/profile
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=application/json
-				Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJvMTgxODA0QGcudW5pY2FtcC5iciIsImF1ZCI6InVua25vd24iLCJleHAiOjE3NDA4MzM0MTksImlhdCI6MTc0MDIyODYxOX0.J5tD3s1i3xiC5LINtUCJTgFBJnlpUnuccm3GbbrbxZvJxClgu0ayCDJ2p8eqrfOVuC8ROP5Sval8-Ps3_35vUw
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mhe selects the option to see his profile&amp#27;[0m     &amp#27;[90m# unicamp.br.inf321.CustomerProfileStepDefinitions.heSelectsTheOptionToSeeHisProfile()&amp#27;[0m
-HTTP/1.1 200 
-Date: Sat, 22 Feb 2025 12:50:22 GMT
-Server: Apache/2.4.29 (Ubuntu)
-Access-Control-Allow-Methods: POST, GET, PUT, OPTIONS, DELETE
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Headers: X-Auth-Token, Content-Type, Authorization
-Access-Control-Allow-Credentials: true
-Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-Pragma: no-cache
-Expires: 0
-X-XSS-Protection: 1; mode=block
-X-Frame-Options: DENY
-X-Content-Type-Options: nosniff
-Content-Type: application/json;charset=UTF-8
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Transfer-Encoding: chunked
-
-{
-    "id": 654,
-    "emailAddress": "o181804@g.unicamp.br",
-    "billing": {
-        "postalCode": null,
-        "firstName": "o181804",
-        "lastName": "unicamp",
-        "bilstateOther": null,
-        "company": null,
-        "phone": null,
-        "address": null,
-        "city": null,
-        "stateProvince": null,
-        "billingAddress": false,
-        "latitude": null,
-        "longitude": null,
-        "zone": null,
-        "country": "BR"
-    },
-    "delivery": null,
-    "gender": null,
-    "language": null,
-    "firstName": "o181804",
-    "lastName": "unicamp",
-    "provider": null,
-    "storeCode": null,
-    "userName": null,
-    "rating": 0.0,
-    "ratingCount": 0,
-    "attributes": [
-        
-    ],
-    "groups": [
-        
-    ]
-}
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mhis profile should be shown with success&amp#27;[0m     &amp#27;[90m# unicamp.br.inf321.CustomerProfileStepDefinitions.hisProfileShouldBeShownWithSuccess()&amp#27;[0m
-]]></system-out>
+  <testcase name="Should show customer profile" classname="Customer Profile" time="0.032">
+    <error message="Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map&lt;java.lang.String, java.lang.String&gt;)" type="io.cucumber.core.runner.DuplicateStepDefinitionException"><![CDATA[io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map<java.lang.String, java.lang.String>)
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
   </testcase>
-  <testcase name="Login with valid credentials" classname="Login" time="0.63">
-    <system-out><![CDATA[
-Scenario: Login with valid credentials              &amp#27;[90m# unicamp/br/inf321/Login.feature:6&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mJuly is registered on the multibags website&amp#27;[0m &amp#27;[90m# unicamp.br.inf321.LoginStepDefinitions.isRegisteredOnTheMultibagsWebsite()&amp#27;[0m
-Request method:	POST
-Request URI:	http://multibags.1dt.com.br/api/v1/customer/login
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "password": "aA#123456789",
-    "username": "o181804@g.unicamp.br"
-}
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mshe logins with her credentials&amp#27;[0m              &amp#27;[90m# unicamp.br.inf321.LoginStepDefinitions.loginsWithValidCredentials(java.util.Map<java.lang.String, java.lang.String>)&amp#27;[0m
-    | email    | o181804@g.unicamp.br |
-    | password | aA#123456789         |
-HTTP/1.1 200 
-Date: Sat, 22 Feb 2025 12:50:22 GMT
-Server: Apache/2.4.29 (Ubuntu)
-Access-Control-Allow-Methods: POST, GET, PUT, OPTIONS, DELETE
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Headers: X-Auth-Token, Content-Type, Authorization
-Access-Control-Allow-Credentials: true
-Content-Type: application/json;charset=UTF-8
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Transfer-Encoding: chunked
-
-{
-    "id": 654,
-    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJvMTgxODA0QGcudW5pY2FtcC5iciIsImF1ZCI6InVua25vd24iLCJleHAiOjE3NDA4MzM0MjMsImlhdCI6MTc0MDIyODYyM30.OdihjWfmf8kLNw3lXJ_ke38T0vO_RbVxSAxcpMhKIbzIa6h10SFZEcblu_im7Eh9xNCskdnc2NE0RnsYNZcaXg"
-}
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mshe should be logged with success&amp#27;[0m            &amp#27;[90m# unicamp.br.inf321.LoginStepDefinitions.shouldBeLoggedWithSuccess()&amp#27;[0m
-]]></system-out>
+  <testcase name="Example #1.1" classname="Exemplos" time="0.004">
+    <error message="Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map&lt;java.lang.String, java.lang.String&gt;)" type="io.cucumber.core.runner.DuplicateStepDefinitionException"><![CDATA[io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map<java.lang.String, java.lang.String>)
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+  </testcase>
+  <testcase name="Example #1.1" classname="Exemplos" time="0.003">
+    <error message="Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map&lt;java.lang.String, java.lang.String&gt;)" type="io.cucumber.core.runner.DuplicateStepDefinitionException"><![CDATA[io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map<java.lang.String, java.lang.String>)
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+  </testcase>
+  <testcase name="Example #1.1" classname="Exemplos" time="0.002">
+    <error message="Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map&lt;java.lang.String, java.lang.String&gt;)" type="io.cucumber.core.runner.DuplicateStepDefinitionException"><![CDATA[io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map<java.lang.String, java.lang.String>)
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+  </testcase>
+  <testcase name="Example #1.1" classname="Exemplos" time="0.002">
+    <error message="Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map&lt;java.lang.String, java.lang.String&gt;)" type="io.cucumber.core.runner.DuplicateStepDefinitionException"><![CDATA[io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map<java.lang.String, java.lang.String>)
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+  </testcase>
+  <testcase name="Example #1.1" classname="Exemplos" time="0.001">
+    <error message="Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map&lt;java.lang.String, java.lang.String&gt;)" type="io.cucumber.core.runner.DuplicateStepDefinitionException"><![CDATA[io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map<java.lang.String, java.lang.String>)
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+  </testcase>
+  <testcase name="Example #1.2" classname="Exemplos" time="0.002">
+    <error message="Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map&lt;java.lang.String, java.lang.String&gt;)" type="io.cucumber.core.runner.DuplicateStepDefinitionException"><![CDATA[io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map<java.lang.String, java.lang.String>)
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+  </testcase>
+  <testcase name="Login with valid credentials" classname="Login" time="0.002">
+    <error message="Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map&lt;java.lang.String, java.lang.String&gt;)" type="io.cucumber.core.runner.DuplicateStepDefinitionException"><![CDATA[io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map<java.lang.String, java.lang.String>)
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+  </testcase>
+  <testcase name="Atualização de review para usuário não autenticado" classname="Atualizar um review (Endpoint /api/v1/auth/products/{id}/reviews/{reviewId})" time="0.002">
+    <error message="Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map&lt;java.lang.String, java.lang.String&gt;)" type="io.cucumber.core.runner.DuplicateStepDefinitionException"><![CDATA[io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map<java.lang.String, java.lang.String>)
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+  </testcase>
+  <testcase name="Atualização de review para produto inexistente" classname="Atualizar um review (Endpoint /api/v1/auth/products/{id}/reviews/{reviewId})" time="0.001">
+    <error message="Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map&lt;java.lang.String, java.lang.String&gt;)" type="io.cucumber.core.runner.DuplicateStepDefinitionException"><![CDATA[io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map<java.lang.String, java.lang.String>)
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+  </testcase>
+  <testcase name="Atualização de review inexistente" classname="Atualizar um review (Endpoint /api/v1/auth/products/{id}/reviews/{reviewId})" time="0.001">
+    <error message="Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map&lt;java.lang.String, java.lang.String&gt;)" type="io.cucumber.core.runner.DuplicateStepDefinitionException"><![CDATA[io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map<java.lang.String, java.lang.String>)
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+  </testcase>
+  <testcase name="Atualização de review não pertencente ao usuário" classname="Atualizar um review (Endpoint /api/v1/auth/products/{id}/reviews/{reviewId})" time="0.002">
+    <error message="Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map&lt;java.lang.String, java.lang.String&gt;)" type="io.cucumber.core.runner.DuplicateStepDefinitionException"><![CDATA[io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in unicamp.br.inf321.DeleteReviewStepDefinitions.o_usuario_esta_autenticado() and unicamp.br.inf321.CreateProductReviewStepDefinitions.usuarioEstaAutenticado(java.util.Map<java.lang.String, java.lang.String>)
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
   </testcase>
 </testsuite>
