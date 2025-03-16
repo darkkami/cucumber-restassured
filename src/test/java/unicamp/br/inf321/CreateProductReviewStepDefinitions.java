@@ -30,7 +30,7 @@ public class CreateProductReviewStepDefinitions {
     public void usuarioEstaAutenticado(Map<String, String> table) {
         this.cucumberWorld.addToNotes("email", table.get("email"));
         this.cucumberWorld.addToNotes("password", table.get("password"));
-        this.cucumberWorld.addToNotes("customerId", new Date().getTime());
+        this.cucumberWorld.addToNotes("customerId", 500);
 
         LoginStepDefinitions loginStepDefinitions = new LoginStepDefinitions(cucumberWorld);
         loginStepDefinitions.isRegisteredOnTheMultibagsWebsite();
@@ -39,24 +39,24 @@ public class CreateProductReviewStepDefinitions {
     }
 
     @Dado("o usuário não está autenticado")
-    public void usuarioNaoEstaAutenticado(Map<String, String> table) {
+    public void usuarioNaoEstaAutenticado() {
         this.cucumberWorld.setRequest(given().log().all().baseUri("http://multibags.1dt.com.br")
                 .contentType(ContentType.JSON.toString())
                 .accept(ContentType.JSON.toString())
         );
         this.cucumberWorld.addToNotes("token", "");
-        this.cucumberWorld.addToNotes("customerId", new Date().getTime());
+        this.cucumberWorld.addToNotes("customerId", 500);
     }
 
     @Dado("o usuário não tem permissão para registrar um review")
     public void usuarioNaoTemPermissao() {
-        this.cucumberWorld.addToNotes("customerId", new Date().getTime());
+        this.cucumberWorld.addToNotes("customerId", 500);
     }
 
     @Quando("o usuário informar um comentário e uma nota")
     public void usuarioInformaComentarioENota(Map<String, String> table) {
         String token = cucumberWorld.getFromNotes("token");
-        Long customerId = cucumberWorld.getFromNotes("customerId");
+        int customerId = cucumberWorld.getFromNotes("customerId");
         int productId = Integer.parseInt(table.get("id"));
         String description = table.get("description");
         double rating = Double.parseDouble(table.get("rating"));

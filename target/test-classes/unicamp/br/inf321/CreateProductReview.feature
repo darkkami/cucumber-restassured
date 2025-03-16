@@ -17,8 +17,6 @@ Funcionalidade: Criar um novo review
 
   Cenário: Inserção de um novo review, sem usuário autenticado
     Dado o usuário não está autenticado
-      | email    | ex188991@g.unicamp.br |
-      | password | Teste123@         |
     Quando o usuário informar um comentário e uma nota
       | id | 5 |
       | description | Produto excelente |

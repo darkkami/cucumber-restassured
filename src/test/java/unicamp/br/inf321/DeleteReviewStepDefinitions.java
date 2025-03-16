@@ -3,9 +3,15 @@ package unicamp.br.inf321;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Quando;
 import io.cucumber.java.pt.Entao;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.apache.http.HttpStatus;
+
+import java.util.Date;
+import java.util.Map;
+
+import static io.restassured.RestAssured.given;
 
 public class DeleteReviewStepDefinitions {
 
@@ -31,6 +37,11 @@ public class DeleteReviewStepDefinitions {
 
     @Dado("o usuário está autenticado porém não possui permissão para exclusão")
     public void o_usuario_esta_autenticado_porém_nao_possui_permissao_para_exclusao() {
+        this.world.setRequest(given().log().all().baseUri("http://multibags.1dt.com.br")
+                .contentType(ContentType.JSON.toString())
+                .accept(ContentType.JSON.toString())
+        );
+
         world.addToNotes("token", "TOKEN_SEM_PERMISSAO");
     }
 
@@ -66,8 +77,13 @@ public class DeleteReviewStepDefinitions {
         response.then().statusCode(statusCode);
     }
 
-    @Entao("a API vai ignorar a solicitação de exclusão")
-    public void a_api_vai_ignorar_a_solicitacao_de_exclusao() {
-        response.then().statusCode(HttpStatus.SC_FORBIDDEN);
+    @Dado("o produto da review possui um ID {int}")
+    public void o_produto_da_review_possui_um_id(Integer int1) {
+        world.addToNotes("productId", int1);
+    }
+
+    @Dado("a review também possui um ID {int} único")
+    public void a_review_também_possui_um_id_único(Integer int1) {
+        world.addToNotes("reviewId", int1);
     }
 }
